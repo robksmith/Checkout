@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/inputFragment">
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.zengo.checkout.views.fragments.InputFragment"
+        android:label="InputFragment">
+        <action
+            android:id="@+id/action_inputFragment_to_callCardPaymentFragment"
+            app:destination="@id/callCardPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callCardPaymentFragment"
+        android:name="com.zengo.checkout.views.fragments.CallCardPaymentFragment"
+        android:label="CallCardPaymentFragment" >
+        <action
+            android:id="@+id/action_callCardPaymentFragment_to_secure3DFragment"
+            app:destination="@id/secure3DFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secure3DFragment"
+        android:name="com.zengo.checkout.views.fragments.Secure3DFragment"
+        android:label="Secure3DFragment" >
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_secure3DFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.zengo.checkout.views.fragments.ResultFragment"
+        android:label="ResultFragment" >
+        <argument
+            android:name="success"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
