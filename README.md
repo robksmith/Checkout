@@ -14,7 +14,7 @@ It is basically made up of one activity with 4 fragments as shown here:
 
 1. **Input Fragment** => Solicits card details
 
-2. **Card Payment Fragmemt** => Makes the POST API call
+2. **Card Payment Fragment** => Makes the POST API call
 
 3. **Secure 3D Fragment** => Webview with the Secure3D url inside it which is returned from the POST call
 

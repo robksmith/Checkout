@@ -11,8 +11,8 @@ interface ApiService
     @POST("pay")
     fun cardPaymentPOST(@HeaderMap headers: Map<String, String> = buildApiHeaders(), @Body body: CardPaymentRequest): Observable<CardPaymentResponse>
 
-    companion object ServiceGenerator {
-
+    companion object ServiceGenerator
+    {
         private fun buildApiHeaders(): HashMap<String, String>
         {
             val map = HashMap<String, String>()
